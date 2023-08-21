@@ -6,11 +6,13 @@
 
 <style scoped>
 .container1 {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: auto;
   width: 100vw;
   padding: 2% 10%;
   display: flex;
   justify-content: space-between;
   border: 1px solid;
+  background: #f7f7f7;
 }
 </style>
