@@ -7,6 +7,7 @@
       aria-label="Default select example"
       class="mt-1 borderNone dropdown"
       v-model="state.committeeDefinition[props.state]"
+      :style="{ width: `${props.width}%` }"
     >
       <option v-for="item in values" :key="item.option" :value="item.option">
         {{ item.option }}
