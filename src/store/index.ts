@@ -8,6 +8,11 @@ interface AppState {
     CommitteeClassification: string;
     CommitteeIssuanceOfFormationDecision:string;
     CommitteeIssuedBy:string;
+    CommitteeDateOfIssuance:Date|null;
+    CommitteeStageOfDevelopmentOfWorkTeams:string;
+    CommitteeTeamType:string;
+    CommitteeStartDateOfTheWorkOfTheTeam:Date|null;
+    CommitteeEndDateOfTheWorkOfTheTeam:Date|null;
   };
   committeeMembers: object;
   CommitteeKpis: object;
@@ -21,7 +26,12 @@ const state: AppState = reactive({
     CommitteeScope: "",
     CommitteeClassification: "",
     CommitteeIssuanceOfFormationDecision:"",
-    CommitteeIssuedBy:""
+    CommitteeIssuedBy:"",
+    CommitteeDateOfIssuance:null,
+    CommitteeStageOfDevelopmentOfWorkTeams:"",
+    CommitteeTeamType:"",
+    CommitteeStartDateOfTheWorkOfTheTeam:null,
+    CommitteeEndDateOfTheWorkOfTheTeam:null,
   },
   committeeMembers: {},
   CommitteeKpis: {},
