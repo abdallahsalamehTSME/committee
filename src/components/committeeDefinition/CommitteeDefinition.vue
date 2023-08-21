@@ -55,7 +55,48 @@
         { option: 'authoritarian' },
       ]"
     />
-    <CommitteeDatePicker />
+    <CommitteeDatePicker
+      header="Date of Issuance"
+      state="CommitteeDateOfIssuance"
+      containerWidth="100"
+      pickerWidth="1020"
+    />
+
+    <CommitteeDropdowns
+      header="Stage of Development of Work Teams"
+      width="100"
+      state="CommitteeStageOfDevelopmentOfWorkTeams"
+      :values="[
+        { option: 'Establishment' },
+        { option: 'Establishment2' },
+        { option: 'Establishment3' },
+      ]"
+    />
+
+    <CommitteeDropdowns
+      header="Team Type"
+      width="100"
+      state="CommitteeTeamType"
+      :values="[
+        { option: 'Cross-functional Teams' },
+        { option: 'None-cross-functional Teams' },
+      ]"
+    />
+
+    <div class="d-flex justify-content-between">
+      <CommitteeDatePicker
+        header="Start Date of the Work of the Team"
+        state="CommitteeStartDateOfTheWorkOfTheTeam"
+        containerWidth="100"
+        pickerWidth="480"
+      />
+      <CommitteeDatePicker
+        header="End Date of the Work of the Team"
+        state="CommitteeEndDateOfTheWorkOfTheTeam"
+        containerWidth="100"
+        pickerWidth="480"
+      />
+    </div>
   </div>
 </template>
 
@@ -67,17 +108,4 @@ import CommitteeDropdowns from "./CommitteeDropdowns.vue";
 import CommitteeDatePicker from "./CommitteeDatePicker.vue";
 </script>
 
-<style scoped>
-.borderNone:focus {
-  outline: none;
-}
-.borderNone {
-  border-radius: 5px;
-  border: 0.5px solid #d1d0d0ee;
-}
-
-.form-check-input:checked {
-  background-color: #b88c33;
-  border-color: #b88c33;
-}
-</style>
+<style scoped></style>
